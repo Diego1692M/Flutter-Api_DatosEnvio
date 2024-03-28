@@ -9,8 +9,8 @@ route.get('/', getEnvio)
 
 route.post('/', postEnvio)
 
-route.put('/', putEnvio)
+route.put('/:cedula', putEnvio)
 
-route.delete('/', deleteEnvio)
+route.delete('/:cedula', deleteEnvio)
 
 module.exports = route

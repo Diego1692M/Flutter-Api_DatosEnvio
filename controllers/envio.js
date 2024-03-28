@@ -33,7 +33,7 @@ const putEnvio = async(req, res) => {
     let mensaje = ''
     try {
         const envio = await Envio.findOneAndUpdate({cedula: cedula},
-        {cedula: cedula, nombre: nombre, apellido:apellido, email:email, telefono:telefono, direccion: direccion, ciudad: ciudad, postal:postal, pais: pais, departamento: departamento})
+        {nombre: nombre, apellido:apellido, email:email, telefono:telefono, direccion: direccion, ciudad: ciudad, postal:postal, pais: pais, departamento: departamento})
         mensaje = 'Actualización exitosa'
     } catch (error) {
         mensaje = error
@@ -44,7 +44,7 @@ const putEnvio = async(req, res) => {
 }
 
 const deleteEnvio = async(req, res) => {
-    const { cedula} = req.body //Desesctructurar
+    const { cedula} = req.params //Desesctructurar
     let mensaje = ''
     try {
         const envio = await Envio.findOneAndDelete({cedula: cedula})
