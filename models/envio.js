@@ -52,6 +52,11 @@ const EnvioSchema = ({
         type: String,
         required:[true, 'El departamento es requirido']
     },
+
+    valor:{
+        type: String,
+        required:[true, 'El valor es requirido']
+    },
 })
 
 
